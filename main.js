@@ -106,7 +106,7 @@
 
   mm.add('(prefers-reduced-motion: no-preference)', () => {
     // Hero intro: one timeline, positioned with labels.
-    const split = SplitText.create('.hero__title span', { type: 'chars', mask: 'chars' });
+    const split = SplitText.create('.hero__title span', { type: 'words,chars', mask: 'chars' });
     const intro = gsap.timeline({ defaults: { duration: 0.9, ease: 'power3.out' } });
     intro.addLabel('photo')
       .from('.hero__visual', { scale: 1.18, duration: 1.8, ease: 'power2.out' }, 'photo')
@@ -139,7 +139,7 @@
       });
     };
     enter('.work', ['.work__title', ...workRows, '.work__media']);
-    enter('.about', ['.about__title', '.about__text']);
+    enter('.about', ['.about__title', '.about__text', ...$$('.service')]);
     enter('.contact', ['.contact__lead', '.contact__mail', ...$$('.contact__foot > *')], 'top 60%');
     enter('.footer', ['.footer__mark', ...$$('.footer__menu a'), '.footer__blocks']);
 

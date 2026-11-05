@@ -5,6 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sylejman Dev — Portfolio</title>
   <meta name="description" content="Portofoli i Sylejman Dev, zhvillues web nga Gjilani, Kosovë. Projekt web për shitje online: Autodekor AMBRA.">
+  <meta name="theme-color" content="#061423">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="sq_AL">
+  <meta property="og:title" content="Sylejman Dev — Zhvillues web nga Gjilani">
+  <meta property="og:description" content="Faqe web praktike për biznese dhe projekte. Shiko projektin Autodekor AMBRA.">
+  <meta property="og:image" content="assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://api.fontshare.com">
   <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
   <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,700&display=swap" rel="stylesheet">
@@ -37,12 +48,12 @@
 <header class="hero" id="top">
   <div class="hero__stage">
     <div class="hero__visual">
-      <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&amp;fit=crop&amp;w=1800&amp;q=85" alt="" fetchpriority="high">
+      <img src="assets/hero-laptop.webp" width="1800" height="1200" alt="" fetchpriority="high">
     </div>
     <div class="hero__card glass">
-      <h1 class="hero__title"><span>Sylejman Dev</span></h1>
+      <h1 class="hero__title"><span>Faqe web që sjellin klientë</span></h1>
       <div class="hero__body">
-        <p class="hero__facts">Zhvillues web<br>Gjilan, Kosovë</p>
+        <p class="hero__facts"><strong>Sylejman Dev</strong><br>Zhvillues web<br>Gjilan, Kosovë</p>
         <p class="hero__lede">Krijoj faqe web praktike për biznese dhe projekte. Shiko projektin tim të shitjeve online për Autodekor AMBRA.</p>
       </div>
       <div class="hero__foot">
@@ -68,15 +79,27 @@
     <div class="work__media">
       <figure class="work__shot is-active" id="p-autodekorambra">
         <div class="project__preview">
-          <img class="project__image" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&amp;fit=crop&amp;w=1400&amp;q=85" alt="Porsche duke lëvizur në rrugë" fetchpriority="high">
-          <p class="project__eyebrow">Projekt web · Gjilan</p>
-          <p class="project__name">Autodekor<br>AMBRA</p>
-          <p class="project__description">Aksesorë dhe pjesë dekoruese për vetura</p>
-          <p class="project__note">Fotografi ilustruese</p>
-          <div class="project__categories" aria-label="Kategoritë e produkteve">
-            <span>Bodykit</span><span>Spoilerë</span><span>Ndriçim LED</span>
+          <div class="project__text">
+            <p class="project__eyebrow">Dyqan online · Gjilan</p>
+            <p class="project__name">Autodekor<br>AMBRA</p>
+            <p class="project__description">Dyqan online për bodykit, spoilerë, LED dhe kozmetikë për vetura.</p>
+            <ul class="project__features" aria-label="Çfarë ndërtova">
+              <li>Katalog produktesh me kategori dhe kërkim</li>
+              <li>Filtrim sipas markës, modelit dhe kategorisë</li>
+              <li>Shportë dhe pagesa me Visa e Mastercard</li>
+              <li>Blog, vlerësime dhe kontakt me WhatsApp</li>
+            </ul>
+            <a class="button glass" href="https://autodekorambra.com/" target="_blank" rel="noopener noreferrer">Vizito faqen live</a>
           </div>
-          <a class="button glass" href="https://autodekorambra.com/" target="_blank" rel="noopener noreferrer">Vizito faqen live</a>
+          <div class="project__devices">
+            <div class="device device--desktop">
+              <span class="device__bar" aria-hidden="true"><i></i><i></i><i></i></span>
+              <img src="assets/autodekorambra-desktop.jpg" width="1440" height="900" alt="Faqja kryesore e Autodekor AMBRA në kompjuter" loading="lazy">
+            </div>
+            <div class="device device--phone">
+              <img src="assets/autodekorambra-mobile.jpg" width="390" height="844" alt="Autodekor AMBRA e hapur në telefon" loading="lazy">
+            </div>
+          </div>
         </div>
       </figure>
     </div>
@@ -89,6 +112,20 @@
       <h2 class="about__title" id="about-title">Rreth meje</h2>
       <p class="about__text">Jam Sylejman Dev, zhvillues web nga Gjilani, Kosovë. Në këtë portfolio prezantoj punën time dhe projektin Autodekor AMBRA, një faqe web për shitje online.</p>
     </div>
+    <ul class="services" aria-label="Shërbimet">
+      <li class="service glass">
+        <h3 class="service__name">Faqe për biznese</h3>
+        <p class="service__text">Faqe të qarta që tregojnë kush jeni, çfarë ofroni dhe si t'ju kontaktojnë klientët.</p>
+      </li>
+      <li class="service glass">
+        <h3 class="service__name">Dyqane online</h3>
+        <p class="service__text">Katalog produktesh, kërkim, shportë dhe pagesa online, si te Autodekor AMBRA.</p>
+      </li>
+      <li class="service glass">
+        <h3 class="service__name">Ridizajnim</h3>
+        <p class="service__text">Faqe ekzistuese bëhen më të shpejta, më moderne dhe funksionojnë mirë në telefon.</p>
+      </li>
+    </ul>
   </div>
 </section>
 
@@ -97,7 +134,6 @@
   <a class="contact__mail" href="mailto:sylaksa@gmail.com">sylaksa@<wbr>gmail.com</a>
   <div class="contact__foot">
     <p>Sylejman Dev<br>Gjilan, Kosovë</p>
-    <p class="contact__social"><a href="https://autodekorambra.com/" target="_blank" rel="noopener noreferrer">Autodekor AMBRA</a></p>
   </div>
 </section>
 
@@ -114,7 +150,6 @@
     </nav>
     <div class="footer__blocks">
       <p><a href="mailto:sylaksa@gmail.com">sylaksa@gmail.com</a><br>Gjilan, Kosovë</p>
-      <p><a href="https://autodekorambra.com/" target="_blank" rel="noopener noreferrer">Autodekor AMBRA</a></p>
     </div>
     <p class="legal">© 2026 Sylejman Dev.</p>
   </div>
