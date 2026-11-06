@@ -1,34 +1,20 @@
 <!doctype html>
-<html lang="sq">
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sylejman Dev — Portfolio</title>
-  <meta name="description" content="Portofoli i Sylejman Dev, zhvillues web nga Gjilani, Kosovë. Projekt web për shitje online: Autodekor AMBRA.">
-  <meta name="theme-color" content="#061423">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="sq_AL">
-  <meta property="og:title" content="Sylejman Dev — Zhvillues web nga Gjilani">
-  <meta property="og:description" content="Faqe web praktike për biznese dhe projekte. Shiko projektin Autodekor AMBRA.">
-  <meta property="og:image" content="assets/og-image.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="preconnect" href="https://api.fontshare.com">
-  <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
-  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script>
-    document.documentElement.classList.add('js');
-    if (navigator.userAgentData && navigator.userAgentData.brands.some((b) => b.brand === 'Chromium')) document.documentElement.classList.add('lg-refract');
-  </script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Sylejman Sylejmani — Junior Full-Stack Developer (MERN) from Gjilan, Kosovo, with 20+ years in QA/QC.">
+<meta property="og:title" content="Sylejman Sylejmani — Full-Stack Developer">
+<meta property="og:description" content="MERN projects, skills and 20+ years of QA/QC experience.">
+<meta name="theme-color" content="#061423">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23131c28'/%3E%3Ctext x='16' y='21' font-family='monospace' font-size='13' fill='%23eef1f5' text-anchor='middle'%3ESS%3C/text%3E%3C/svg%3E">
+<title>Sylejman Sylejmani</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<a class="skip" href="#work">Kalo te projektet</a>
-
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <filter id="lg-refract" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
     <feTurbulence type="fractalNoise" baseFrequency="0.006 0.009" numOctaves="2" seed="7" result="noise"/>
@@ -37,128 +23,332 @@
   </filter>
 </svg>
 
-<nav class="dock glass" aria-label="Navigimi kryesor">
-  <span class="dock__pill" aria-hidden="true"></span>
-  <a class="dock__brand" href="#top">Sylejman Dev</a>
-  <a href="#work">Projektet</a>
-  <a href="#about">Rreth meje</a>
-  <a href="#contact">Kontakt</a>
+<div id="app" data-lang="en">
+
+<nav class="nav glass" aria-label="Main">
+  <div class="wrap">
+    <a class="mark" href="#top"><i>SS</i>Sylejman Dev</a>
+    <div class="links">
+      <a href="#projects"><span lang="en">Projects</span><span lang="sq">Projektet</span></a>
+      <a href="#skills"><span lang="en">Skills</span><span lang="sq">Aftësitë</span></a>
+      <a href="#experience"><span lang="en">Experience</span><span lang="sq">Përvoja</span></a>
+      <a href="#contact"><span lang="en">Contact</span><span lang="sq">Kontakti</span></a>
+      <div class="lang glass" role="group" aria-label="Language">
+        <button type="button" id="btn-en" data-set="en" aria-pressed="true">EN</button>
+        <button type="button" id="btn-sq" data-set="sq" aria-pressed="false">AL</button>
+      </div>
+    </div>
+  </div>
 </nav>
 
-<header class="hero" id="top">
-  <div class="hero__stage">
-    <div class="hero__visual">
-      <img src="assets/hero-laptop.webp" width="1800" height="1200" alt="" fetchpriority="high">
+<header class="wrap hero" id="top">
+  <div>
+    <div class="eyebrow"><span class="dot"></span>
+      <span lang="en">Junior Full-Stack Developer · Gjilan, Kosovo</span>
+      <span lang="sq">Junior Full-Stack Developer · Gjilan, Kosovë</span>
     </div>
-    <div class="hero__card glass">
-      <h1 class="hero__title"><span>Faqe web që sjellin klientë</span></h1>
-      <div class="hero__body">
-        <p class="hero__facts"><strong>Sylejman Dev</strong><br>Zhvillues web<br>Gjilan, Kosovë</p>
-        <p class="hero__lede">Krijoj faqe web praktike për biznese dhe projekte. Shiko projektin tim të shitjeve online për Autodekor AMBRA.</p>
-      </div>
-      <div class="hero__foot">
-        <p class="hero__credit">Pamje ilustruese · programim</p>
-        <a class="button glass" href="#work">Shiko projektin</a>
-        <a class="link" href="mailto:sylaksa@gmail.com">Më shkruaj</a>
-      </div>
+    <h1>Sylejman <span>Sylejmani</span></h1>
+    <p class="lede" lang="en">I spent <strong>20+ years in QA/QC</strong> making sure things work before they ship. Now I build web applications with the <strong>MERN stack</strong> and bring the same inspector's discipline to every release.</p>
+    <p class="lede" lang="sq">Kam kaluar <strong>mbi 20 vjet në QA/QC</strong> duke u siguruar që gjërat funksionojnë para se të dorëzohen. Tani ndërtoj aplikacione web me <strong>MERN stack</strong> dhe sjell të njëjtën disiplinë inspektimi në çdo publikim.</p>
+    <div class="cta">
+      <a class="btn primary glass" href="#projects"><span lang="en">View projects</span><span lang="sq">Shiko projektet</span> →</a>
+      <a class="btn ghost glass" href="https://github.com/sylaksa-creator" target="_blank" rel="noopener">GitHub ↗</a>
     </div>
   </div>
+
+  <aside class="tag glass" aria-label="Profile summary">
+    <h2><span lang="en">Inspection tag · Developer</span><span lang="sq">Etiketa e inspektimit · Zhvillues</span></h2>
+    <dl>
+      <dt><span lang="en">Name</span><span lang="sq">Emri</span></dt><dd>Sylejman Sylejmani</dd>
+      <dt>Stack</dt><dd>MongoDB · Express · React · Node</dd>
+      <dt><span lang="en">Background</span><span lang="sq">Prapavija</span></dt><dd><span lang="en">QA/QC, logistics, admin</span><span lang="sq">QA/QC, logjistikë, administratë</span></dd>
+      <dt><span lang="en">Languages</span><span lang="sq">Gjuhët</span></dt><dd><span lang="en">Albanian, English</span><span lang="sq">Shqip, Anglisht</span></dd>
+      <dt><span lang="en">Base</span><span lang="sq">Vendi</span></dt><dd><span lang="en">Gjilan, Kosovo · Remote OK</span><span lang="sq">Gjilan, Kosovë · Edhe remote</span></dd>
+    </dl>
+    <hr>
+    <div class="sign">
+      <small>REF · SS-DEV-2026</small>
+      <span class="stamp"><span lang="en">Open to<br>work</span><span lang="sq">I hapur<br>për punë</span></span>
+    </div>
+  </aside>
 </header>
 
-<main>
+<div class="wrap">
+  <div class="facts glass">
+    <div><b>20+</b><span lang="en">years in QA/QC &amp; logistics</span><span lang="sq">vjet në QA/QC dhe logjistikë</span></div>
+    <div><b>3</b><span lang="en">shipped projects</span><span lang="sq">projekte të publikuara</span></div>
+    <div><b>6</b><span lang="en">month programming training</span><span lang="sq">muaj trajnim për programim</span></div>
+    <div><b>2</b><span lang="en">working languages</span><span lang="sq">gjuhë pune</span></div>
+  </div>
+</div>
 
-<section class="work" id="work" aria-labelledby="work-title" style="--n: 1">
-  <div class="work__stage">
-    <div class="work__side">
-      <h2 class="work__title" id="work-title">Projekt i zgjedhur</h2>
-      <ol class="work__index" role="list">
-        <li><a href="#p-autodekorambra" class="work__row" aria-current="true"><span>Autodekor AMBRA</span><span class="work__tags">Shitje online · Aksesorë për vetura</span></a></li>
-      </ol>
+<section id="projects" class="wrap">
+  <div class="head">
+    <div>
+      <div class="eyebrow"><span lang="en">Inspection records</span><span lang="sq">Regjistrat e inspektimit</span></div>
+      <h2><span lang="en">Projects</span><span lang="sq">Projektet</span></h2>
     </div>
+    <p lang="en">Each project is logged like an inspection: what it does, what was verified, and what it runs on.</p>
+    <p lang="sq">Çdo projekt është regjistruar si inspektim: çfarë bën, çfarë u verifikua dhe në çfarë teknologjie punon.</p>
+  </div>
 
-    <div class="work__media">
-      <figure class="work__shot is-active" id="p-autodekorambra">
-        <div class="project__preview">
-          <div class="project__text">
-            <p class="project__eyebrow">Dyqan online · Gjilan</p>
-            <p class="project__name">Autodekor<br>AMBRA</p>
-            <p class="project__description">Dyqan online për bodykit, spoilerë, LED dhe kozmetikë për vetura.</p>
-            <ul class="project__features" aria-label="Çfarë ndërtova">
-              <li>Katalog produktesh me kategori dhe kërkim</li>
-              <li>Filtrim sipas markës, modelit dhe kategorisë</li>
-              <li>Shportë dhe pagesa me Visa e Mastercard</li>
-              <li>Blog, vlerësime dhe kontakt me WhatsApp</li>
-            </ul>
-            <a class="button glass" href="https://autodekorambra.com/" target="_blank" rel="noopener noreferrer">Vizito faqen live</a>
-          </div>
-          <div class="project__devices">
-            <div class="device device--desktop">
-              <span class="device__bar" aria-hidden="true"><i></i><i></i><i></i></span>
-              <img src="assets/autodekorambra-desktop.jpg" width="1440" height="900" alt="Faqja kryesore e Autodekor AMBRA në kompjuter" loading="lazy">
-            </div>
-            <div class="device device--phone">
-              <img src="assets/autodekorambra-mobile.jpg" width="390" height="844" alt="Autodekor AMBRA e hapur në telefon" loading="lazy">
-            </div>
-          </div>
+  <div class="filter" role="group" aria-label="Filter projects">
+    <button type="button" class="chip glass" id="f-all" data-filter="all" aria-pressed="true"><span lang="en">All</span><span lang="sq">Të gjitha</span></button>
+    <button type="button" class="chip glass" id="f-react" data-filter="react" aria-pressed="false">React</button>
+    <button type="button" class="chip glass" id="f-node" data-filter="node" aria-pressed="false">Node / Express</button>
+    <button type="button" class="chip glass" id="f-mongo" data-filter="mongo" aria-pressed="false">MongoDB</button>
+    <button type="button" class="chip glass" id="f-auto" data-filter="auto" aria-pressed="false"><span lang="en">Automation</span><span lang="sq">Automatizim</span></button>
+  </div>
+
+  <div class="records">
+    <article class="rec glass" data-tags="react node mongo">
+      <div class="rec-main">
+        <div class="rec-top"><span>REC · AMB-01</span><span class="status"><span lang="en">Live in production</span><span lang="sq">Live në prodhim</span></span></div>
+        <h3>Autodekor AMBRA</h3>
+        <p lang="en">A full production web app for our family automotive decoration and accessories shop in Gjilan. Customers browse products and services; staff and admins manage the catalog and content from a protected dashboard.</p>
+        <p lang="sq">Aplikacion i plotë web në prodhim për biznesin familjar të dekorimit dhe aksesorëve të automjeteve në Gjilan. Klientët shfletojnë produktet dhe shërbimet; stafi dhe adminët menaxhojnë katalogun nga një panel i mbrojtur.</p>
+        <div class="links-row">
+          <a href="https://autodekorambra.netlify.app" target="_blank" rel="noopener"><span lang="en">Visit live site</span><span lang="sq">Hap faqen live</span> ↗</a>
+          <a href="https://github.com/sylaksa-creator" target="_blank" rel="noopener">GitHub ↗</a>
         </div>
-      </figure>
+      </div>
+      <div class="rec-side">
+        <div>
+          <p class="label"><span lang="en">Verified</span><span lang="sq">Verifikuar</span></p>
+          <ul class="check">
+            <li><span lang="en">Three roles: Admin, Staff, Public</span><span lang="sq">Tre role: Admin, Staf, Publik</span></li>
+            <li><span lang="en">JWT authentication and protected routes</span><span lang="sq">Autentikim me JWT dhe rrugë të mbrojtura</span></li>
+            <li><span lang="en">Image uploads stored on Cloudinary</span><span lang="sq">Ngarkim fotosh në Cloudinary</span></li>
+            <li><span lang="en">Split deploy: API on Railway, client on Netlify</span><span lang="sq">Deploy i ndarë: API në Railway, klienti në Netlify</span></li>
+          </ul>
+        </div>
+        <div>
+          <p class="label">Stack</p>
+          <div class="stack"><span>React</span><span>Vite</span><span>Tailwind</span><span>Express 5</span><span>Node.js</span><span>MongoDB</span><span>JWT</span><span>Cloudinary</span></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="rec glass" data-tags="react node mongo">
+      <div class="rec-main">
+        <div class="rec-top"><span>REC · ROI-02</span><span class="status team"><span lang="en">Team project · Deployed</span><span lang="sq">Projekt ekipor · Publikuar</span></span></div>
+        <h3>Roi Hunting</h3>
+        <p lang="en">A job listing platform built as a team with our instructor at ROI Academy. Employers post jobs, candidates search and apply, and access is controlled by role.</p>
+        <p lang="sq">Platformë për shpallje pune, e ndërtuar në ekip me instruktorin në ROI Academy. Punëdhënësit publikojnë punë, kandidatët kërkojnë dhe aplikojnë, ndërsa qasja kontrollohet sipas rolit.</p>
+        <div class="links-row">
+          <a href="https://github.com/GreedAH/roihunting-app" target="_blank" rel="noopener"><span lang="en">View repository</span><span lang="sq">Shiko repository-n</span> ↗</a>
+        </div>
+      </div>
+      <div class="rec-side">
+        <div>
+          <p class="label"><span lang="en">Verified</span><span lang="sq">Verifikuar</span></p>
+          <ul class="check">
+            <li><span lang="en">Role-based access control</span><span lang="sq">Kontroll qasjeje sipas roleve</span></li>
+            <li><span lang="en">Soft deletion with an isDeleted flag</span><span lang="sq">Fshirje e butë me fushën isDeleted</span></li>
+            <li><span lang="en">Server-side pagination</span><span lang="sq">Faqosje në server</span></li>
+            <li><span lang="en">Deployed on Netlify and Railway</span><span lang="sq">Publikuar në Netlify dhe Railway</span></li>
+          </ul>
+        </div>
+        <div>
+          <p class="label">Stack</p>
+          <div class="stack"><span>React</span><span>Vite</span><span>shadcn/ui</span><span>Express</span><span>MongoDB</span><span>JWT</span></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="rec glass" data-tags="react auto">
+      <div class="rec-main">
+        <div class="rec-top"><span>REC · PRM-03</span><span class="status"><span lang="en">In use</span><span lang="sq">Në përdorim</span></span></div>
+        <h3>AMBRA Promo</h3>
+        <p lang="en">Programmatic promo videos for Instagram and TikTok, written in React with Remotion. A GitHub Actions workflow renders the videos in the cloud, so new promos come out of code instead of a video editor.</p>
+        <p lang="sq">Video promovuese të gjeneruara me kod për Instagram dhe TikTok, të shkruara në React me Remotion. Një workflow në GitHub Actions i renderon videot në cloud, kështu promot e reja dalin nga kodi, jo nga një editor videosh.</p>
+        <div class="links-row">
+          <a href="https://github.com/sylaksa-creator" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+      <div class="rec-side">
+        <div>
+          <p class="label"><span lang="en">Verified</span><span lang="sq">Verifikuar</span></p>
+          <ul class="check">
+            <li><span lang="en">Vertical 1080×1920 at 30 fps</span><span lang="sq">Format vertikal 1080×1920 me 30 fps</span></li>
+            <li><span lang="en">Cloud rendering with GitHub Actions</span><span lang="sq">Renderim në cloud me GitHub Actions</span></li>
+            <li><span lang="en">Optional upload to Cloudinary</span><span lang="sq">Ngarkim opsional në Cloudinary</span></li>
+          </ul>
+        </div>
+        <div>
+          <p class="label">Stack</p>
+          <div class="stack"><span>React</span><span>Remotion</span><span>GitHub Actions</span><span>Cloudinary</span></div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="skills" class="wrap">
+  <div class="head">
+    <div>
+      <div class="eyebrow"><span lang="en">Toolbox</span><span lang="sq">Mjetet</span></div>
+      <h2><span lang="en">Skills, with proof</span><span lang="sq">Aftësitë, me prova</span></h2>
+    </div>
+    <p lang="en">Next to each skill is the project where I used it.</p>
+    <p lang="sq">Pranë çdo aftësie është projekti ku e kam përdorur.</p>
+  </div>
+  <div class="skills">
+    <div class="sk glass">
+      <h3>Frontend</h3>
+      <ul>
+        <li>React <em>AMB · ROI · PRM</em></li>
+        <li><span lang="en">Advanced React (hooks, context)</span><span lang="sq">React i avancuar (hooks, context)</span> <em>AMB</em></li>
+        <li>JavaScript ES6+ <em>ALL</em></li>
+        <li>HTML5 · CSS3 <em>ALL</em></li>
+        <li>Tailwind CSS <em>AMB</em></li>
+        <li>shadcn/ui <em>ROI</em></li>
+        <li>Vite <em>AMB · ROI</em></li>
+      </ul>
+    </div>
+    <div class="sk glass">
+      <h3>Backend &amp; data</h3>
+      <ul>
+        <li>Node.js <em>AMB · ROI</em></li>
+        <li>Express <em>AMB · ROI</em></li>
+        <li>REST APIs <em>AMB · ROI</em></li>
+        <li>MongoDB <em>AMB · ROI</em></li>
+        <li><span lang="en">JWT auth &amp; roles</span><span lang="sq">JWT dhe role</span> <em>AMB · ROI</em></li>
+        <li><span lang="en">Pagination, soft delete</span><span lang="sq">Faqosje, fshirje e butë</span> <em>ROI</em></li>
+      </ul>
+    </div>
+    <div class="sk glass">
+      <h3><span lang="en">Deploy &amp; tooling</span><span lang="sq">Deploy dhe mjete</span></h3>
+      <ul>
+        <li>Git · GitHub <em>ALL</em></li>
+        <li>GitHub Actions <em>PRM</em></li>
+        <li>Netlify <em>AMB · ROI</em></li>
+        <li>Railway <em>AMB · ROI</em></li>
+        <li>Cloudinary <em>AMB · PRM</em></li>
+        <li>Remotion <em>PRM</em></li>
+      </ul>
+    </div>
+    <div class="sk qa glass">
+      <h3><span lang="en">From 20 years in QA/QC</span><span lang="sq">Nga 20 vjet në QA/QC</span></h3>
+      <ul>
+        <li><span lang="en">Inspection &amp; testing mindset</span><span lang="sq">Mendësi inspektimi dhe testimi</span> <em>QA</em></li>
+        <li><span lang="en">Clear documentation</span><span lang="sq">Dokumentim i qartë</span> <em>QA</em></li>
+        <li><span lang="en">Process &amp; standards</span><span lang="sq">Procese dhe standarde</span> <em>QA</em></li>
+        <li><span lang="en">Logistics &amp; coordination</span><span lang="sq">Logjistikë dhe koordinim</span> <em>LOG</em></li>
+      </ul>
+    </div>
+    <div class="sk glass">
+      <h3><span lang="en">Ways of working</span><span lang="sq">Mënyra e punës</span></h3>
+      <ul>
+        <li><span lang="en">Bilingual: Albanian · English</span><span lang="sq">Dygjuhësh: Shqip · Anglisht</span> <em>ALL</em></li>
+        <li><span lang="en">Team delivery</span><span lang="sq">Punë në ekip</span> <em>ROI</em></li>
+        <li><span lang="en">Client-facing builds</span><span lang="sq">Projekte për klientë realë</span> <em>AMB</em></li>
+        <li><span lang="en">AI-assisted dev (Claude Code, MCP)</span><span lang="sq">Zhvillim me AI (Claude Code, MCP)</span> <em>DEV</em></li>
+      </ul>
+    </div>
+    <div class="sk glass">
+      <h3><span lang="en">Content &amp; marketing</span><span lang="sq">Përmbajtje dhe marketing</span></h3>
+      <ul>
+        <li><span lang="en">Social content calendars</span><span lang="sq">Kalendarë përmbajtjeje</span> <em>AMB</em></li>
+        <li><span lang="en">Reels &amp; TikTok scripts</span><span lang="sq">Skripta për Reels dhe TikTok</span> <em>AMB</em></li>
+        <li><span lang="en">Programmatic video</span><span lang="sq">Video me kod</span> <em>PRM</em></li>
+      </ul>
+    </div>
+  </div>
+  <div class="next glass"><b><span lang="en">Next up</span><span lang="sq">Në vazhdim</span></b>
+    <span lang="en">Learning TypeScript to add type safety across my React and Node projects.</span>
+    <span lang="sq">Po mësoj TypeScript për të shtuar siguri tipesh në projektet React dhe Node.</span>
+  </div>
+</section>
+
+<section class="wrap" aria-labelledby="how">
+  <div class="head">
+    <div>
+      <div class="eyebrow"><span lang="en">Process</span><span lang="sq">Procesi</span></div>
+      <h2 id="how"><span lang="en">How I build</span><span lang="sq">Si ndërtoj</span></h2>
+    </div>
+  </div>
+  <div class="steps glass">
+    <div class="step"><small>STEP 1</small><h3><span lang="en">Inspect</span><span lang="sq">Inspektoj</span></h3><p lang="en">Pin down requirements and who uses what before writing code.</p><p lang="sq">Sqaroj kërkesat dhe kush përdor çfarë para se të shkruaj kod.</p></div>
+    <div class="step"><small>STEP 2</small><h3><span lang="en">Build</span><span lang="sq">Ndërtoj</span></h3><p lang="en">Small, working increments with a clean API and reusable components.</p><p lang="sq">Hapa të vegjël që punojnë, me API të pastër dhe komponentë të ripërdorshëm.</p></div>
+    <div class="step"><small>STEP 3</small><h3><span lang="en">Verify</span><span lang="sq">Verifikoj</span></h3><p lang="en">Test every role and edge case against a checklist, the way I did in QA.</p><p lang="sq">Testoj çdo rol dhe rast skajor sipas një liste kontrolli, si në QA.</p></div>
+    <div class="step"><small>STEP 4</small><h3><span lang="en">Ship</span><span lang="sq">Publikoj</span></h3><p lang="en">Deploy, watch the logs, and fix what real users find.</p><p lang="sq">Publikoj, ndjek logjet dhe rregulloj atë që gjejnë përdoruesit realë.</p></div>
+  </div>
+</section>
+
+<section id="experience" class="wrap">
+  <div class="head">
+    <div>
+      <div class="eyebrow"><span lang="en">Track record</span><span lang="sq">Historiku</span></div>
+      <h2><span lang="en">Experience &amp; education</span><span lang="sq">Përvoja dhe arsimimi</span></h2>
+    </div>
+  </div>
+  <div class="timeline glass">
+    <div class="row">
+      <div class="when"><span lang="en">Now</span><span lang="sq">Tani</span></div>
+      <div>
+        <h3>Junior Full-Stack Developer</h3>
+        <p class="org">Freelance · Autodekor AMBRA</p>
+        <p lang="en">Building and maintaining the AMBRA production web app and its automated promo pipeline, while taking on new web projects.</p>
+        <p lang="sq">Ndërtoj dhe mirëmbaj aplikacionin e AMBRA-s në prodhim dhe pipeline-in e videove promovuese, duke marrë edhe projekte të reja web.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="when"><span lang="en">6 months</span><span lang="sq">6 muaj</span></div>
+      <div>
+        <h3><span lang="en">Specialized Programming track</span><span lang="sq">Program i specializuar programimi</span></h3>
+        <p class="org">ROI Academy</p>
+        <p lang="en">HTML5/CSS3, JavaScript, React and Advanced React, Node.js, MongoDB, Git/GitHub. Finished with the team-built Roi Hunting platform.</p>
+        <p lang="sq">HTML5/CSS3, JavaScript, React dhe React i avancuar, Node.js, MongoDB, Git/GitHub. Përfunduar me platformën ekipore Roi Hunting.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="when">20+ <span lang="en">years</span><span lang="sq">vjet</span></div>
+      <div>
+        <h3><span lang="en">QA/QC, Logistics &amp; Administration</span><span lang="sq">QA/QC, Logjistikë dhe Administratë</span></h3>
+        <p class="org">UN Mission in Kosovo · LOGCAP (KBR, Fluor, Sallyport Global)</p>
+        <p lang="en">Quality inspections, logistics and administration on the UN Mission in Kosovo and US military support contracts, working to strict standards in English-speaking international teams.</p>
+        <p lang="sq">Inspektime cilësie, logjistikë dhe administratë në Misionin e OKB-së në Kosovë dhe në kontrata mbështetëse ushtarake të SHBA-së, me standarde të rrepta në ekipe ndërkombëtare në anglisht.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="when"><span lang="en">Ongoing</span><span lang="sq">Në vazhdim</span></div>
+      <div>
+        <h3><span lang="en">Co-owner</span><span lang="sq">Bashkëpronar</span></h3>
+        <p class="org">Autodekor AMBRA · Gjilan</p>
+        <p lang="en">Running the family automotive decoration and accessories business, which gives me a real client and real users for everything I build.</p>
+        <p lang="sq">Drejtoj biznesin familjar të dekorimit dhe aksesorëve të automjeteve, që më jep klient dhe përdorues realë për gjithçka që ndërtoj.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="about" id="about" aria-labelledby="about-title">
-  <div class="about__stage">
-    <div class="about__head glass">
-      <h2 class="about__title" id="about-title">Rreth meje</h2>
-      <p class="about__text">Jam Sylejman Dev, zhvillues web nga Gjilani, Kosovë. Në këtë portfolio prezantoj punën time dhe projektin Autodekor AMBRA, një faqe web për shitje online.</p>
+<section id="contact" class="wrap">
+  <div class="contact glass">
+    <div>
+      <h2><span lang="en">Let's build something that works.</span><span lang="sq">Le të ndërtojmë diçka që funksionon.</span></h2>
+      <p lang="en">Open to junior developer roles, internships and freelance web projects, on-site in Kosovo or remote.</p>
+      <p lang="sq">I hapur për pozita junior, praktika dhe projekte web freelance, në Kosovë ose remote.</p>
     </div>
-    <ul class="services" aria-label="Shërbimet">
-      <li class="service glass">
-        <h3 class="service__name">Faqe për biznese</h3>
-        <p class="service__text">Faqe të qarta që tregojnë kush jeni, çfarë ofroni dhe si t'ju kontaktojnë klientët.</p>
-      </li>
-      <li class="service glass">
-        <h3 class="service__name">Dyqane online</h3>
-        <p class="service__text">Katalog produktesh, kërkim, shportë dhe pagesa online, si te Autodekor AMBRA.</p>
-      </li>
-      <li class="service glass">
-        <h3 class="service__name">Ridizajnim</h3>
-        <p class="service__text">Faqe ekzistuese bëhen më të shpejta, më moderne dhe funksionojnë mirë në telefon.</p>
-      </li>
-    </ul>
+    <div class="cbox">
+      <div class="cline glass">
+        <div style="min-width:0"><small>Email</small><span id="email">sylaksa@gmail.com</span></div>
+        <button type="button" id="copy"><span lang="en">Copy</span><span lang="sq">Kopjo</span></button>
+      </div>
+      <div class="cline glass">
+        <div style="min-width:0"><small>GitHub</small><span>sylaksa-creator</span></div>
+        <a href="https://github.com/sylaksa-creator" target="_blank" rel="noopener"><span lang="en">Open</span><span lang="sq">Hap</span> ↗</a>
+      </div>
+    </div>
   </div>
+  <footer>
+    <span>© 2026 Sylejman Sylejmani</span>
+    <span>Gjilan · Kosovo</span>
+  </footer>
 </section>
 
-<section class="contact glass" id="contact" aria-labelledby="contact-title">
-  <h2 class="contact__lead" id="contact-title">Ke një projekt në mendje? Më shkruaj.</h2>
-  <a class="contact__mail" href="mailto:sylaksa@gmail.com">sylaksa@<wbr>gmail.com</a>
-  <div class="contact__foot">
-    <p>Sylejman Dev<br>Gjilan, Kosovë</p>
-  </div>
-</section>
+</div>
 
-</main>
-
-<footer class="footer">
-  <div class="footer__side glass">
-    <p class="footer__mark">Sylejman Dev</p>
-    <nav class="footer__menu" aria-label="Navigimi në fund të faqes">
-      <a href="#work">Projektet</a>
-      <a href="#about">Rreth meje</a>
-      <a href="#contact">Kontakt</a>
-      <a href="#top">Kthehu lart</a>
-    </nav>
-    <div class="footer__blocks">
-      <p><a href="mailto:sylaksa@gmail.com">sylaksa@gmail.com</a><br>Gjilan, Kosovë</p>
-    </div>
-    <p class="legal">© 2026 Sylejman Dev.</p>
-  </div>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
 <script src="main.js"></script>
 </body>
 </html>
