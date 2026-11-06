@@ -14,6 +14,34 @@
     });
   }
 
+  // Hero on scroll: while the hero is pinned, the inspection tag shrinks into the
+  // bottom-right corner and the photo behind it settles closer.
+  var band=document.querySelector('.hero-band'), pin=document.querySelector('.hero-pin'),
+      tag=document.querySelector('.tag'), visual=document.querySelector('.hero-visual');
+  var pinMQ=matchMedia('(min-width:821px) and (min-height:600px) and (prefers-reduced-motion:no-preference)');
+  var ticking=false;
+  function heroScroll(){
+    ticking=false;
+    if(!pinMQ.matches){tag.style.transform='';visual.style.transform='';return}
+    // The band starts just above the page (it runs under the nav), so progress runs from scroll 0
+    // to the moment the band's bottom reaches the bottom of the screen.
+    var end=band.getBoundingClientRect().top+scrollY+band.offsetHeight-innerHeight;
+    var p=Math.min(1,Math.max(0,scrollY/end));
+    var e=p*p*(3-2*p);
+    // The pin sits at the top of the screen while this runs, so the tag's offsets are screen positions.
+    var margin=24, vw=document.documentElement.clientWidth;
+    var dx=(vw-margin)-(tag.offsetLeft+tag.offsetWidth);
+    var dy=(innerHeight-margin)-(tag.offsetTop+tag.offsetHeight);
+    tag.style.transform='translate('+dx*e+'px,'+dy*e+'px) rotate('+1.2*(1-e)+'deg) scale('+(1-.4*e)+')';
+    visual.style.transform='scale('+(1+.08*e)+')';
+  }
+  function requestHero(){if(!ticking){ticking=true;requestAnimationFrame(heroScroll)}}
+  if(band&&pin&&tag&&visual){
+    addEventListener('scroll',requestHero,{passive:true});
+    addEventListener('resize',requestHero);
+    heroScroll();
+  }
+
   function setLang(l){
     app.dataset.lang=l;
     document.documentElement.lang=l;

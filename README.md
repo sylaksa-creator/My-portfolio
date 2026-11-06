@@ -12,17 +12,18 @@ The layout and content are copied from that live site. The page is styled as a Q
 
 ## Run it
 
-Open `index.html` directly, or serve the folder:
+Needs Node.js 20.19+ or 22.12+.
 
 ```bash
-npx -y http-server@14.1.1 -p 5173 -c-1
+npm install
+npm run dev
 ```
 
-Then open http://localhost:5173.
+This starts Vite at http://localhost:5173 and opens it in the browser. The page reloads by itself when you save a file. Vite is used only for local development; the site itself has no build step, and opening `index.html` directly also works.
 
 ## What's on the page
 
-- **Intro:** name, short bio and an "inspection tag" profile card, followed by four key numbers.
+- **Intro:** name, short bio and an "inspection tag" profile card over a darkened photo of a laptop showing code (`assets/hero-laptop.webp`), followed by four key numbers. On large screens the hero holds still for a moment while the tag shrinks to 60% and slides into the bottom-right corner. On phones, short screens and with reduced motion it simply scrolls.
 - **Projects:** Autodekor AMBRA, Roi Hunting and AMBRA Promo. Each one is shown as an inspection record (what it does, what was verified, its stack), with filter buttons above them.
 - **Skills:** grouped skills, each with the projects that used it.
 - **Process:** four steps (inspect, build, verify, ship).
