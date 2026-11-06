@@ -2,7 +2,9 @@
 
 A one-page portfolio for Sylejman Sylejmani, a junior full-stack (MERN) developer from Gjilan, Kosovo, with 20+ years in QA/QC. Plain HTML, CSS and JavaScript, no build step. Fonts come from Google Fonts.
 
-The layout and content are copied from the live site, https://sylejmans-portofolio.netlify.app/. The page is styled as a QA inspector's record book. On top of that sits a dark "liquid glass" look, carried over from this repo's earlier design:
+Live site: https://sylejman-portfolio.netlify.app/
+
+The layout and content are copied from that live site. The page is styled as a QA inspector's record book. On top of that sits a dark "liquid glass" look, carried over from this repo's earlier design:
 - slowly drifting colored light behind the page
 - frosted, see-through panels (`.glass`) with a bright edge
 - a highlight that follows the mouse
